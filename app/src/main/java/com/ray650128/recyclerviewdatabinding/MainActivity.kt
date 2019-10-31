@@ -13,8 +13,10 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        // 使用 DataBindingUtil 設定 ContentView
         bindingView = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
+        // 指派 ViewModel
         viewModel = ViewModel(this)
         bindingView.viewModel = viewModel
     }

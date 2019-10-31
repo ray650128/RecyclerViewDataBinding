@@ -20,6 +20,7 @@ class ViewModel(activity: MainActivity) : BaseObservable() {
         // 初始化 Adapter
         adapter = DataAdapter(activity, R.layout.item_content, BR.item, dataList)
 
+        // 套用至 RecyclerView
         with(activity.bindingView.recyclerView) {
             layoutManager = LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false)
             adapter = adapter
