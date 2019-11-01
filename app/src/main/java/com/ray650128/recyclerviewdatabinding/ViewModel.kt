@@ -23,7 +23,7 @@ class ViewModel(activity: MainActivity) : BaseObservable() {
         // 套用至 RecyclerView
         with(activity.bindingView.recyclerView) {
             layoutManager = LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false)
-            adapter = adapter
+            adapter = this@ViewModel.adapter
         }
     }
 
